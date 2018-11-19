@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#import #概念 : import语句用于导入由另一个模块导出的绑定。无论是否声明了strict mode，导入的模块都运行在严格模式下。import语句不能在嵌入式脚本中使用。 语法 ：  `import defaultExport from &amp;quot;module-name&amp;quot;;//导入使用默认导出名称的导出  import * as name from &amp;quot;modul">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/New Document.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="#import #概念 : import语句用于导入由另一个模块导出的绑定。无论是否声明了strict mode，导入的模块都运行在严格模式下。import语句不能在嵌入式脚本中使用。 语法 ：  `import defaultExport from &amp;quot;module-name&amp;quot;;//导入使用默认导出名称的导出  import * as name from &amp;quot;modul">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-11-19T06:49:47.445Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="#import #概念 : import语句用于导入由另一个模块导出的绑定。无论是否声明了strict mode，导入的模块都运行在严格模式下。import语句不能在嵌入式脚本中使用。 语法 ：  `import defaultExport from &amp;quot;module-name&amp;quot;;//导入使用默认导出名称的导出  import * as name from &amp;quot;modul">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="page-" class="article article-type-page" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/New Document.html" class="article-date">
+  <time datetime="2018-11-19T06:49:47.445Z" itemprop="datePublished">2018-11-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="import"><a href="#import" class="headerlink" title="#import #"></a>#import #</h2><p><strong>概念 :</strong> import语句用于导入由另一个模块导出的绑定。无论是否声明了strict mode，导入的模块都运行在严格模式下。import语句不能在嵌入式脚本中使用。</p>
+<p><strong>语法 ：</strong> </p>
+<pre><code>`import defaultExport from &quot;module-name&quot;;//导入使用默认导出名称的导出
+ import * as name from &quot;module-name&quot;;//导入带有别名的所有导出
+ import { export } from &quot;module-name&quot;;//导入单个导出
+ import { export as alias } from &quot;module-name&quot;;//导入单个带有别名的导出
+ import { export1 , export2 } from &quot;module-name&quot;;//导入多个导出
+ import { export1 , export2 as alias2 , [...] } from &quot;module-name&quot;;//导出时重命名多个
+ import defaultExport, { export [ , [...] ] } from &quot;module-name&quot;;//
+ import defaultExport, * as name from &quot;module-name&quot;;
+ import &quot;module-name&quot;;`
+</code></pre><p><strong>defaultExport :</strong> 将引用模块默认导出的名称。</p>
+<p>如：</p>
+<p>导出：<code>export default Index</code></p>
+<p>导入：  <code>import defaultExport from &#39;./Index&#39;</code></p>
+<p>那么：defaultExport代表 Index（默认导出的名称）</p>
+<p><strong>module-name ：</strong> 要导入的模块。这通常是包含模块的.js的相对或绝对路径名，不包括.js扩展名。某些打包工具可以允许或要求使用该扩展；检查你的运行环境。只允许单引号和双引号的字符。</p>
+<p><strong>name ：</strong> 引用时将用作一种命名的空间的模块对象的名称</p>
+<p><strong>export，exportN ：</strong>要导入的导出名称。</p>
+<h1 id="export"><a href="#export" class="headerlink" title="export"></a>export</h1><p><strong>概念 ：</strong> 用于在创建JavaScript模块时，从模块中导出函数、对象或原始值，一边其他程序可以通过import语句使用它们。</p>
+<p><strong>语法 :</strong></p>
+<pre><code>`export { name1, name2, …, nameN };
+ export { variable1 as name1, variable2 as name2, …, nameN };
+ export let name1, name2, …, nameN; // also var
+ export let name1 = …, name2 = …, …, nameN; // also var, const
+ export function FunctionName() {...}
+ export class ClassName {...}
+
+ export default expression;
+ export default function (…) { … } // also class, function*
+ export default function name1(…) { … } // also class, function*
+ export { name1 as default, … };
+
+ export * from …;
+ export { name1, name2, …, nameN } from …;
+ export { import1 as name1, import2 as name2, …, nameN } from …;`
+</code></pre><p>有两种不同的导出方式，每种方式对应于上述的一种语法：<br>1.命名导出</p>
+<pre><code>`export default function() {}`
+</code></pre><p>如：</p>
+<p>导出：</p>
+<pre><code>//module &quot;index.js&quot;
+
+`function myFunction(x) {
+  return x*2;
+}
+const a = 4;
+export { myFunction,a };`
+</code></pre><p>导入：<br>    <code>import { myFunction, a } from &#39;index.js&#39;;
+    console.log(myFunction(3)); // 6
+    console.log(a);    // 4</code></p>
+<p> 2.默认导出（函数/类）</p>
+<pre><code>`export default function() {}`
+
+`export default class {}`
+</code></pre><p>如(函数)：<br>导出：</p>
+<pre><code> `// module &quot;index.js&quot;
+export default function myFunction(x) {
+  return x*x;
+}`
+</code></pre><p>导入：</p>
+<pre><code>`// module &quot;index.js&quot;
+import myFunction from &apos;index.js&apos;;
+console.log(myFunction(3)); // 9`
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/New Document.html" data-id="cjonyavz500006kuy3tzib7yw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/11/">November 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/11/19/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
